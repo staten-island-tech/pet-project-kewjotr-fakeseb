@@ -1,3 +1,6 @@
+
+# Activity 1
+
 class Hero:
     def __init__(self, name, money, inventory):
         self.name = name
