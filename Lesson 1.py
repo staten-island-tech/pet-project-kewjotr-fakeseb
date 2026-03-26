@@ -11,21 +11,16 @@ class pet:
     def show_status(self):
         print("Sipke happiness value is now",self.__happiness)
 
+    def tick(self, Action):
+        if Action == "play":
+            Sipke.play(2)
+        if Action == "status":
+            Sipke.show_status()
+        if Action == "wash":
+            Sipke.play(-3)
+
 Sipke = pet("Sipke", 5)
 
-Action = input("Select action\n")
-if Action == "play":
-    Sipke.play(2)
-if Action == "status":
-    Sipke.show_status()
-if Action == "wash":
-    Sipke.play(-3)
-while Action != "end":
-    Action = input("Select action\n")
-    if Action == "play":
-        Sipke.play(2)
-    if Action == "status":
-        Sipke.show_status()
-    if Action == "wash":
-        Sipke.play(-3)
-exit
+while True:
+    Action = input("Do an action\n")
+    Sipke.tick(Action)
