@@ -9,7 +9,23 @@ class pet:
         self.__happiness += moraleincreasement
 
     def show_status(self):
-        print(self.__happiness)
+        print("Sipke happiness value is now",self.__happiness)
 
 Sipke = pet("Sipke", 5)
 
+Action = input("Select action\n")
+if Action == "play":
+    Sipke.play(2)
+if Action == "status":
+    Sipke.show_status()
+if Action == "wash":
+    Sipke.play(-3)
+while Action != "end":
+    Action = input("Select action\n")
+    if Action == "play":
+        Sipke.play(2)
+    if Action == "status":
+        Sipke.show_status()
+    if Action == "wash":
+        Sipke.play(-3)
+exit
