@@ -7,6 +7,7 @@ class pet:
 
     def play(self, moraleincreasement):
         self.__happiness += moraleincreasement
+        print("Sipke is playing good ball and not tiki taka.")
 
     def show_status(self):
         print("Sipke happiness value is now",self.__happiness)
