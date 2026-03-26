@@ -1,17 +1,15 @@
-
 # Activity 1
 
-class Hero:
-    def __init__(self, name, money, inventory):
+class pet:
+    def __init__(self, name, happiness):
         self.name = name
-        self.money = money
-        self.inventory = inventory
+        self.__happiness = happiness
 
-    def buy(self, item):
-        self.inventory.append(item)
-        print(self.inventory)
+    def play(self, moraleincreasement):
+        self.__happiness += moraleincreasement
 
-Ernst = Hero("Ernst", 1000000, ["Flag of Libya"])
+    def show_status(self):
+        print(self.__happiness)
 
-Ernst.buy({"title": "Toyota", "speed": 90, "atk": 380})
-print(Ernst.__dict__)
+Sipke = pet("Sipke", 5)
+
