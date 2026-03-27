@@ -1,5 +1,5 @@
 class Hero:
-    def __identity__(self, name, health, inventory):
+    def __init__(self, name, health, inventory):
         self.name = name
         self.health = health
         self.inventory = inventory
@@ -8,3 +8,4 @@ class Hero:
         self.marketitems = marketitems()
         self.balance = balance
     
+HA_Sosa = Hero("HA Sosa", 100, "Silver Pot")
