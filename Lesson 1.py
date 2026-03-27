@@ -1,4 +1,4 @@
-# Activity 1
+# Activity 2
 
 class pet:
     def __init__(self, name, happiness):
