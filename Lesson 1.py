@@ -15,9 +15,9 @@ class pet:
     def tick(self, Action):
         if Action == "play":
             Sipke.play(2)
-        if Action == "status":
+        elif Action == "status":
             Sipke.show_status()
-        if Action == "wash":
+        elif Action == "wash":
             Sipke.play(-3)
 
 Sipke = pet("Sipke", 5)

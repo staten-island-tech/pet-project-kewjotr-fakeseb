@@ -1,3 +1,6 @@
+import random
+lottery = random.randint(0,5)
+
 class Hero:
     def __init__(self, name, health, inventory):
         self.name = name
@@ -8,5 +11,8 @@ class shopping:
     def market(self, marketitems, balance):
         self.marketitems = marketitems()
         self.balance = balance
+
+    def gamble(self, lottery):
+        if lottery == 0:
     
-HA_Sosa = Hero("HA Sosa", 100, "Silver Pot")
+James = Hero("James", 100, "Silver Pot")
