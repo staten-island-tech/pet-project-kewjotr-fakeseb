@@ -3,7 +3,8 @@ class Hero:
         self.name = name
         self.health = health
         self.inventory = inventory
-    
+
+class shopping:    
     def market(self, marketitems, balance):
         self.marketitems = marketitems()
         self.balance = balance
