@@ -32,7 +32,7 @@ class Administrator(User):
     def display_info(self):
         return f"Administrator: {self.name}, Email: {self.email}, Role: {self.role}"
     
-student = Student("Cherki", "cherki@example.com", -200, "S74238914")
+student = Student("Cherki", "cherki@example.com", -200.00, "S74238914")
 teacher = Teacher("Mr. Gurgenidze", "agurgenidze@example.com", "Mathematics")
 administrator = Administrator("Ms. Boje", "boje@example.com", "Principal")
 
