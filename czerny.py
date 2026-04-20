@@ -24,7 +24,7 @@ class Market:
 
     def gamble(self, lottery):
         if lottery == 0:
-            
+
     def choice(self, thetower):
         if thetower == "checkmarket" or thetower == "market":
             Market.marketitems()
