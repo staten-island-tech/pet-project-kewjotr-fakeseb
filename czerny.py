@@ -1,5 +1,6 @@
 import random
-[Tape = {
+lottery = random.randint(0,5)
+Tape = {
     "Name": "Tape",
     "Price": 2.00,
 }
@@ -13,6 +14,7 @@ class Hero:
         self.health = health
         self.inventory = inventory
         self.balance = balance
+
 class Market:
     def marketitems(self):
         print("Tape", "Chess Board", "Heinz Ketchup", "Ice Cream", "Woodwork", "Sand", "Flag of Libya", "Plank", "Weedspray", "Turk", "Crusader Kings 3")
@@ -21,13 +23,13 @@ class Market:
 
 
     def gamble(self, lottery):
-        lottery = random.randint(0,5)
         if lottery == 0:
-
+            
     def choice(self, thetower):
         if thetower == "checkmarket" or thetower == "market":
             Market.marketitems()
         if thetower == "gamble":
+            Market.gamble(lottery)
 
 class payed_objected:
     def __init__(self,price):
