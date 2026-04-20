@@ -1,43 +1,34 @@
-import random
-lottery = random.randint(0,5)
-Tape = {
-    "Name": "Tape",
-    "Price": 2.00,
-}
-
-
-
-
+class Objects:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
 class Hero:
-    def __init__(self, name, health, inventory, balance):
+    def __init__(self, name, health, balance):
         self.name = name
         self.health = health
-        self.inventory = inventory
+        self.inventory = []
         self.balance = balance
 
 class Market:
+    def __init__(self,items):
+        self.items = items
     def marketitems(self):
-        print("Tape", "Chess Board", "Heinz Ketchup", "Ice Cream", "Woodwork", "Sand", "Flag of Libya", "Plank", "Weedspray", "Turk", "Crusader Kings 3")
-
+        print(Market.items)
     def buy(self):
-
-
-    def gamble(self, lottery):
-        if lottery == 0:
-
+        purchase = input()
+        Hero.balance - Objects.price
     def choice(self, thetower):
         if thetower == "checkmarket" or thetower == "market":
             Market.marketitems()
-        if thetower == "gamble":
-            Market.gamble(lottery)
+        if thetower == "buy" or thetower == "purchase":
+            Market.buy()
 
 class payed_objected:
     def __init__(self,price):
         self.price = price
 
 
-James = Hero("James", 100, "Silver Pot", 1000)
-Tape = Market()
+James = Hero("James", 100, 1000)
 
 while True:
     thetower = input()
