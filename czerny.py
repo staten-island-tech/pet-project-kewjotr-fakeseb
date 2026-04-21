@@ -1,8 +1,8 @@
 class Hero:
-    def __init__(self, name, inventory, health, balance):
+    def __init__(self, name, health, balance):
         self.name = name
         self.health = health
-        self.inventoy = inventory
+        self.inventory = []
         self.balance = balance
 
 class Market:
@@ -14,8 +14,9 @@ class Market:
 
     def buy(self):
         buying = input("Select")
-        if buying in Market.items:
-            
+        for x in Market.items:
+            if buying in Market.items:
+                Hero.inventory.append(Market.items(x))
 
 James = Hero("James", 100, 1000)
 Stock = Market("")
