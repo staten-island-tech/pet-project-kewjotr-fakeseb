@@ -12,12 +12,12 @@ class Market:
     def check(self):
         print(self.items)
 
-    def buy(self):
+    def buy(self,hero_obj):
         buying = input("Select")
         for x in self.items:
             if buying in self.items:
-                Hero.inventory.append(x)
-                Hero.balance - 5
+                hero_obj.inventory.append(x)
+                hero_obj.balance - 5
                 return x
 
 James = Hero("James", [], 100, 1000)
@@ -27,5 +27,6 @@ while True:
     action = input("Do an action")
     if (action == "checkmarket") or (action == "check"):
         Stock.check()
-    if (action == "buy") or (action == "purchase"):
-        Stock.buy()
+    elif (action == "buy") or (action == "purchase"):
+        Stock.buy(James)
+    elifif (action == "checkinventory") or (action == )
