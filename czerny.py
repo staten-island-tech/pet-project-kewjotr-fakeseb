@@ -10,24 +10,22 @@ class Market:
         self.items = items
     
     def check(self):
-        print(Market.items)
+        print(self.items)
 
     def buy(self):
         buying = input("Select")
-        for x in Market.items:
-            if buying in Market.items:
-                signal = True
+        for x in self.items:
+            if buying in self.items:
+                Hero.inventory.append(x)
+                Hero.balance - 5
                 return x
 
 James = Hero("James", [], 100, 1000)
-Stock = Market("")
+Stock = Market(["Tape", "Chessboard", "Fig", "Shoes"])
 
 while True:
-    signal = False
     action = input("Do an action")
     if (action == "checkmarket") or (action == "check"):
         Stock.check()
     if (action == "buy") or (action == "purchase"):
         Stock.buy()
-        if signal == True:
-            James.inventory.append(x)
