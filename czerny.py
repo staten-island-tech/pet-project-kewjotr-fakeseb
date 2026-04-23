@@ -36,6 +36,8 @@ class Market:
 
 James = Hero("James", [], 100, 1000)
 Stock = Market(["Tape", "Chessboard", "Fig", "Shoes"])
+Battle = Fighting()
+To = Event()
 
 print(James)
 
