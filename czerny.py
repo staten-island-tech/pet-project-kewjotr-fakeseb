@@ -1,9 +1,23 @@
+import random
+
 class Hero:
     def __init__(self, name, inventory, health, balance):
         self.name = name
         self.health = health
         self.inventory = inventory
         self.balance = balance
+
+class Fighting:
+    def __init__(self):
+        pass
+    def gilbert(self, monster):
+        pass
+
+class Event:
+    def __init__(self):
+        pass
+    def maximum(self, number):
+        pass
 
 class Market:
     def __init__(self,items):
@@ -23,10 +37,15 @@ class Market:
 James = Hero("James", [], 100, 1000)
 Stock = Market(["Tape", "Chessboard", "Fig", "Shoes"])
 
+print(James)
+
 while True:
     action = input("Do an action")
-    if (action == "checkmarket") or (action == "check"):
-        Stock.check()
-    elif (action == "buy") or (action == "purchase"):
-        Stock.buy(James)
-    elifif (action == "checkinventory") or (action == )
+    spawn = random.randint(0, 10)
+    if spawn < 8:
+        if (action == "checkmarket") or (action == "check"):
+            Stock.check()
+        elif (action == "buy") or (action == "purchase"):
+            Stock.buy(James)
+        elif (action == "checkinventory") or (action == "inventory"):
+            print(James.inventory)
