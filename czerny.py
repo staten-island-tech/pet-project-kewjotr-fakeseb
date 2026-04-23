@@ -1,8 +1,8 @@
 class Hero:
-    def __init__(self, name, health, balance):
+    def __init__(self, name, inventory, health, balance):
         self.name = name
         self.health = health
-        self.inventory = []
+        self.inventory = inventory
         self.balance = balance
 
 class Market:
@@ -10,20 +10,23 @@ class Market:
         self.items = items
     
     def check(self):
-        print(Market.items)
+        print(self.items)
 
-    def buy(self):
+    def buy(self,hero_obj):
         buying = input("Select")
-        for x in Market.items:
-            if buying in Market.items:
-                Hero.inventory.append(Market.items(x))
+        for x in self.items:
+            if buying in self.items:
+                hero_obj.inventory.append(x)
+                hero_obj.balance - 5
+                return x
 
-James = Hero("James", 100, 1000)
-Stock = Market("")
+James = Hero("James", [], 100, 1000)
+Stock = Market(["Tape", "Chessboard", "Fig", "Shoes"])
 
 while True:
     action = input("Do an action")
     if (action == "checkmarket") or (action == "check"):
         Stock.check()
-    if (action == "buy") or (action == "purchase"):
-        Stock.buy()
+    elif (action == "buy") or (action == "purchase"):
+        Stock.buy(James)
+    elifif (action == "checkinventory") or (action == )
