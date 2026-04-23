@@ -17,7 +17,7 @@ class Event:
     def __init__(self):
         pass
     def maximum(self, number):
-        pass
+        if number == "8":
 
 class Market:
     def __init__(self,items):
@@ -41,13 +41,14 @@ To = Event()
 
 print(James)
 
-while True:
-    action = input("Do an action")
+while James.health != 0:
     spawn = random.randint(0, 10)
     if spawn < 8:
+        action = input("Do an action")
         if (action == "checkmarket") or (action == "check"):
             Stock.check()
         elif (action == "buy") or (action == "purchase"):
             Stock.buy(James)
         elif (action == "checkinventory") or (action == "inventory"):
             print(James.inventory)
+        return action
