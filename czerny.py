@@ -1,23 +1,24 @@
 import random
 
+events = ["None", "None", "None", "None","None", "None", "None", "None", "Hound", "Gargoyle", "Sauron", "Nezhmetdinov"]
+
 class Hero:
     def __init__(self, name, inventory, health, balance):
         self.name = name
         self.health = health
         self.inventory = inventory
         self.balance = balance
-
+    
+    def regeneration(self):
+        if Hero.health < 100:
+            Hero.health + 5
+        else:
+            Hero.health == 100
 class Fighting:
     def __init__(self):
         pass
-    def gilbert(self, monster):
-        pass
-
-class Event:
-    def __init__(self):
-        pass
-    def maximum(self, number):
-        if number == "8":
+    def gilbert(self, number):
+        monster = events[number]
 
 class Market:
     def __init__(self,items):
@@ -37,12 +38,10 @@ class Market:
 James = Hero("James", [], 100, 1000)
 Stock = Market(["Tape", "Chessboard", "Fig", "Shoes"])
 Battle = Fighting()
-To = Event()
-
-print(James)
 
 while James.health != 0:
-    spawn = random.randint(0, 10)
+    spawn = random.randint(0, 11)
+    James.regeneration()
     if spawn < 8:
         action = input("Do an action")
         if (action == "checkmarket") or (action == "check"):
@@ -51,4 +50,5 @@ while James.health != 0:
             Stock.buy(James)
         elif (action == "checkinventory") or (action == "inventory"):
             print(James.inventory)
-        return action
+    else:
+        Battle.gilbert(spawn)
